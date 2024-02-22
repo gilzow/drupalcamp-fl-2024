@@ -73,7 +73,8 @@ hooks:
     # The build hook runs after Composer to finish preparing up your code.
     # No services are available but the disk is writeable.
     build: |
-        set -e
+      set -e
+      yes | cp -f $PLATFORM_APP_DIR/web/themes/menu-main.css $PLATFORM_APP_DIR/web/core/profiles/demo_umami/themes/umami/css/components/navigation/menu-main/menu-main.css
     # The deploy hook runs after your application has been deployed and started.
     # Code cannot be modified at this point but the database is available.
     # The site is not accepting requests while this script runs so keep it
@@ -148,7 +149,7 @@ crons:
     # Run Drupal's cron tasks every 19 minutes.
     drupal:
         spec: '*/19 * * * *'
-        commands: 
+        commands:
             start: 'cd web ; drush core-cron'
 
 source:
