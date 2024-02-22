@@ -6,7 +6,7 @@ core_version_requirement: ^8 || ^9 || ^10
 base theme: umami
 # Defines libraries group in which we can add CSS/JS.
 libraries:
-  - drupalcamp/global-styling
+  - drupalcamp/camp-styling
 # Regions, quote the names
 regions:
   header: Header
