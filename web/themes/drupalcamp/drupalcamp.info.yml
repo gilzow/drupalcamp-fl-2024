@@ -1,17 +1,23 @@
 name: DrupalCamp
 type: theme
-description: This is a DrupalCamp sub theme of Unami
-core_version_requirement: ^8 || ^9 || ^10
-# Defines the base theme
 base theme: umami
-# Defines libraries group in which we can add CSS/JS.
+description: This is a DrupalCamp sub theme of Unami
+package: Custom
+core_version_requirement: ^10
 libraries:
-  - drupalcamp/global-styling
-# Regions, quote the names
+  - drupalcamp/global
 regions:
+  pre_header: Pre-header
   header: Header
-  featured: Featured
+  highlighted: Highlighted
+  tabs: Tabs
+  banner_top: 'Banner Top'
+  breadcrumbs: Breadcrumbs
+  page_title: 'Page Title'
   content: Content
-  sidebar_first: First sidebar
-  sidebar_second: Second sidebar
+  sidebar: Sidebar
+  content_bottom: 'Content Bottom'
   footer: Footer
+  bottom: Bottom
+  page_top: 'Page top' # Needed by Drupal Core
+  page_bottom: 'Page bottom' # Needed by Drupal Core
